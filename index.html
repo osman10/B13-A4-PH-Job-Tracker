@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B3-A4-PH-JOB-TRACKER</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- fonts Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- main style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- show the hreder and job count -->
+    <header>
+      <div class="section">
+        <h1 class="h1">Job Application Tracker</h1>
+        <div class="counts-card flex items-center justify-between py-8">
+          <div>
+            <p>Total</p>
+            <p id="allCount">0</p>
+          </div>
+          <div>
+            <p>Interview</p>
+            <p style="color: green" id="interviewCount">0</p>
+          </div>
+          <div>
+            <p>Rejected</p>
+            <p style="color: red" id="rejectedCount">0</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Available Jobs button group-->
+    <section>
+      <div class="section flex justify-between">
+        <h2 class="h2">Available Jobs</h2>
+        <p style="color: rgb(125, 122, 122)">
+          <span id="result"></span>
+        </p>
+      </div>
+      <!-- finter the of All, Interview and Rejected -->
+      <div class="section flex gap-3 mb-5">
+        <button class="filter-btn active" onclick="filterJobs('all')" id="btn-all">All</button>
+        <button class="filter-btn" onclick="filterJobs('interview')" id="btn-interview">Interview</button>
+        <button class="filter-btn" onclick="filterJobs('reject')" id="btn-reject">Rejected</button>
+      </div>
+    </section>
+
+    <!-- Jobs list -->
+    <section>
+      <div class="section">
+        <div id="job-list"></div>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
